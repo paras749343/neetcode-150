@@ -2,7 +2,7 @@ package test;
 
 import org.junit.Assert;
 import org.junit.Test;
-import twopointers.*;
+import problems.twopointers.*;
 
 import java.util.ArrayList;
 import java.util.List;

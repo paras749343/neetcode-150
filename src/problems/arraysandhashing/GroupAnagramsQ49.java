@@ -1,4 +1,4 @@
-package arraysandhashing;
+package problems.arraysandhashing;
 
 import java.util.ArrayList;
 import java.util.HashMap;

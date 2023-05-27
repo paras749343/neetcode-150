@@ -1,4 +1,4 @@
-package twopointers;
+package problems.twopointers;
 
 public class TwoSumV2Q167 {
     public int[] twoSum(int[] numbers, int target) {

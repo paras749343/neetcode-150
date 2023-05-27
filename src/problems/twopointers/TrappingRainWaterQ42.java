@@ -1,4 +1,4 @@
-package twopointers;
+package problems.twopointers;
 
 public class TrappingRainWaterQ42 {
     public int trap(int[] height) {

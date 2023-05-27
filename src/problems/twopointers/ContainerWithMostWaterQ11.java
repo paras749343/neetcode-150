@@ -1,4 +1,4 @@
-package twopointers;
+package problems.twopointers;
 
 public class ContainerWithMostWaterQ11 {
     public int maxArea(int[] height) {

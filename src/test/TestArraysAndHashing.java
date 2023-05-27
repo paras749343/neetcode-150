@@ -1,7 +1,7 @@
 package test;
 
 
-import arraysandhashing.*;
+import problems.arraysandhashing.*;
 import org.junit.Assert;
 import org.junit.Test;
 

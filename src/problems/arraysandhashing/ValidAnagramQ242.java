@@ -1,4 +1,4 @@
-package arraysandhashing;
+package problems.arraysandhashing;
 
 public class ValidAnagramQ242 {
     public boolean isAnagram(String s, String t) {

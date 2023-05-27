@@ -1,4 +1,4 @@
-package twopointers;
+package problems.twopointers;
 
 public class ValidPalindromeQ125 {
     public boolean isPalindrome(String s) {
