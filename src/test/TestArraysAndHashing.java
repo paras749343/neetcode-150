@@ -71,7 +71,7 @@ public class TestArraysAndHashing {
   @Test
   public void testValidSudokuQ36() {
     ValidSudokuQ36 validSudokuQ36 = new ValidSudokuQ36();
-    var result = validSudokuQ36.isValidSudoku(getTestSudoku());
+    var result = validSudokuQ36.isValidSudoku(getDummySudoku());
     Assert.assertTrue(result);
   }
 
@@ -92,7 +92,7 @@ public class TestArraysAndHashing {
     Assert.assertEquals(9, result);
   }
 
-  private char[][] getTestSudoku() {
+  private char[][] getDummySudoku() {
     return new char[][]{
         new char[]{'5', '3', '.', '.', '7', '.', '.', '.', '.'},
         new char[]{'6', '.', '.', '1', '9', '5', '.', '.', '.'},

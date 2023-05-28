@@ -20,7 +20,7 @@ public class TestBinarySearch {
   @Test
   public void testSearchA2DMatrixQ74() {
     SearchA2DMatrixQ74 searchA2DMatrixQ74 = new SearchA2DMatrixQ74();
-    var result = searchA2DMatrixQ74.searchMatrix(getTestSorted2DArray(), 3);
+    var result = searchA2DMatrixQ74.searchMatrix(getDummySorted2DArray(), 3);
     Assert.assertTrue(result);
   }
 
@@ -49,7 +49,7 @@ public class TestBinarySearch {
     Assert.assertEquals("bar2", timeBasedKeyValueStoreQ981.get("foo", 5));
   }
 
-  private int[][] getTestSorted2DArray() {
+  private int[][] getDummySorted2DArray() {
     return new int[][]{
         new int[]{1, 3, 5, 7},
         new int[]{10, 11, 16, 20},
