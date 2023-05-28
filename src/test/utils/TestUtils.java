@@ -1,4 +1,4 @@
-package test;
+package test.utils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,7 +8,7 @@ import java.util.Objects;
 
 public class TestUtils {
 
-  static <T> boolean isSimilarListOfList(List<List<T>> expected, List<List<T>> actual) {
+  public static <T> boolean isSimilarListOfList(List<List<T>> expected, List<List<T>> actual) {
     HashSet<HashSet<T>> expectedHashSet = new HashSet<>();
     HashSet<HashSet<T>> actualHashSet = new HashSet<>();
     for (List<T> stringList : expected) {
@@ -21,11 +21,11 @@ public class TestUtils {
     return Objects.equals(expectedHashSet, actualHashSet);
   }
 
-  static <T> boolean isSimilarList(List<T> expected, List<T> actual) {
+  public static <T> boolean isSimilarList(List<T> expected, List<T> actual) {
     return Objects.equals(new HashSet<>(expected), new HashSet<>(actual));
   }
 
-  static List<Integer> intArrayToIntegerList(int[] input) {
+  public static List<Integer> intArrayToIntegerList(int[] input) {
     List<Integer> resultList = new ArrayList<>();
     Arrays.stream(input).forEach(resultList::add);
     return resultList;

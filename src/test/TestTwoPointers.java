@@ -9,6 +9,7 @@ import problems.twopointers.ThreeSumQ15;
 import problems.twopointers.TrappingRainWaterQ42;
 import problems.twopointers.TwoSumV2Q167;
 import problems.twopointers.ValidPalindromeQ125;
+import test.utils.TestUtils;
 
 public class TestTwoPointers {
 

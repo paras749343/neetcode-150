@@ -7,6 +7,7 @@ import problems.stack.EvaluateReversePolishNotationQ150;
 import problems.stack.GenerateParenthesesQ22;
 import problems.stack.MinStackQ155;
 import problems.stack.ValidParenthesesQ20;
+import test.utils.TestUtils;
 
 public class TestStack {
 

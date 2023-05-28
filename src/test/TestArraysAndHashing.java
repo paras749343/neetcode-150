@@ -15,6 +15,7 @@ import problems.arraysandhashing.TopKFrequentElementsQ347;
 import problems.arraysandhashing.TwoSumQ1;
 import problems.arraysandhashing.ValidAnagramQ242;
 import problems.arraysandhashing.ValidSudokuQ36;
+import test.utils.TestUtils;
 
 public class TestArraysAndHashing {
 
