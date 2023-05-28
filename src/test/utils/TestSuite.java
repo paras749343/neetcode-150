@@ -8,6 +8,7 @@ import test.TestBinarySearch;
 import test.TestLinkedList;
 import test.TestSlidingWindow;
 import test.TestStack;
+import test.TestTrees;
 import test.TestTwoPointers;
 
 @RunWith(Suite.class)
@@ -17,7 +18,8 @@ import test.TestTwoPointers;
     TestLinkedList.class,
     TestSlidingWindow.class,
     TestStack.class,
-    TestTwoPointers.class
+    TestTwoPointers.class,
+    TestTrees.class
 })
 public class TestSuite {
 

@@ -1,11 +1,14 @@
 package test.utils;
 
 import datastructures.ListNode;
+import datastructures.TreeNode;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Queue;
 
 public class TestUtils {
 
@@ -41,7 +44,7 @@ public class TestUtils {
     return temporaryList.stream().mapToInt(i -> i).toArray();
   }
 
-  public static ListNode intArrayToListNode(int[] input) {
+  public static ListNode intArrayToListNode(int[] input) { //TODO adopt it to List as input
     ListNode head = null;
     ListNode current = null;
 
@@ -55,5 +58,36 @@ public class TestUtils {
       }
     }
     return head;
+  }
+
+  public static TreeNode levelOderArrayToTree(List<Integer> input) {
+    return insertLevelOrder(input, 0);
+  }
+
+  private static TreeNode insertLevelOrder(List<Integer> input, int iterator) {
+    TreeNode root = null;
+    if (iterator < input.size() && input.get(iterator) != Integer.MIN_VALUE) {
+      root = new TreeNode(input.get(iterator));
+      root.left = insertLevelOrder(input, 2 * iterator + 1);
+      root.right = insertLevelOrder(input, 2 * iterator + 2);
+    }
+    return root;
+  }
+
+  public static int[] TreeToLevelOrderArray(TreeNode root) {
+    List<Integer> list = new ArrayList<>();
+    Queue<TreeNode> queue = new LinkedList<>();
+    queue.add(root);
+    while (!queue.isEmpty()) {
+      TreeNode tempNode = queue.poll();
+      list.add(tempNode.val);
+      if (tempNode.left != null) {
+        queue.add(tempNode.left);
+      }
+      if (tempNode.right != null) {
+        queue.add(tempNode.right);
+      }
+    }
+    return list.stream().mapToInt(i -> i).toArray();
   }
 }
