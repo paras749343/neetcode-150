@@ -3,31 +3,35 @@ package problems.stack;
 import java.util.Stack;
 
 public class ValidParenthesesQ20 {
-    public boolean isValid(String s) {
-        Stack<Character> characterStack = new Stack<>();
-        for(int iterator_i=0; iterator_i<s.length(); ++iterator_i){
-            char currentCharacter = s.charAt(iterator_i);
-            if(currentCharacter == '(' || currentCharacter == '[' || currentCharacter == '{'){
-                characterStack.push(currentCharacter);
-            }
-            else {
-                if(characterStack.isEmpty() || characterStack.peek()!=getOpposite(currentCharacter))
-                    return false;
-                characterStack.pop();
-            }
+
+  public boolean isValid(String s) {
+    Stack<Character> characterStack = new Stack<>();
+    for (int iterator_i = 0; iterator_i < s.length(); ++iterator_i) {
+      char currentCharacter = s.charAt(iterator_i);
+      if (currentCharacter == '(' || currentCharacter == '[' || currentCharacter == '{') {
+        characterStack.push(currentCharacter);
+      } else {
+        if (characterStack.isEmpty() || characterStack.peek() != getOpposite(currentCharacter)) {
+          return false;
         }
-
-        return characterStack.isEmpty();
-
+        characterStack.pop();
+      }
     }
 
-    private static Character getOpposite(char currentCharacter) {
-        if(currentCharacter == ')')
-            return '(';
-        if(currentCharacter == ']')
-            return '[';
-        if(currentCharacter == '}')
-            return '{';
-        return 'x';
+    return characterStack.isEmpty();
+
+  }
+
+  private static Character getOpposite(char currentCharacter) {
+    if (currentCharacter == ')') {
+      return '(';
     }
+    if (currentCharacter == ']') {
+      return '[';
+    }
+    if (currentCharacter == '}') {
+      return '{';
+    }
+    return 'x';
+  }
 }
