@@ -5,6 +5,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 import test.TestArraysAndHashing;
 import test.TestBinarySearch;
+import test.TestLinkedList;
 import test.TestSlidingWindow;
 import test.TestStack;
 import test.TestTwoPointers;
@@ -13,6 +14,7 @@ import test.TestTwoPointers;
 @SuiteClasses({
     TestArraysAndHashing.class,
     TestBinarySearch.class,
+    TestLinkedList.class,
     TestSlidingWindow.class,
     TestStack.class,
     TestTwoPointers.class
