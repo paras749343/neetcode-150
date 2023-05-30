@@ -1,5 +1,7 @@
 package test;
 
+import static test.utils.TestUtils.isSimilarListOfList;
+
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.Assert;
@@ -9,7 +11,7 @@ import problems.twopointers.ThreeSumQ15;
 import problems.twopointers.TrappingRainWaterQ42;
 import problems.twopointers.TwoSumV2Q167;
 import problems.twopointers.ValidPalindromeQ125;
-import test.utils.TestUtils;
+
 
 public class TestTwoPointers {
 
@@ -34,7 +36,7 @@ public class TestTwoPointers {
     List<List<Integer>> expected = new ArrayList<>();
     expected.add(List.of(-1, -1, 2));
     expected.add(List.of(-1, 0, 1));
-    Assert.assertTrue(TestUtils.isSimilarListOfList(expected, result));
+    Assert.assertTrue(isSimilarListOfList(expected, result));
   }
 
   @Test

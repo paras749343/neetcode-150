@@ -1,5 +1,8 @@
 package test;
 
+import static test.utils.TestUtils.intArrayToListNode;
+import static test.utils.TestUtils.listNodeListToIntArray;
+
 import datastructures.ListNode;
 import org.junit.Assert;
 import org.junit.Test;
@@ -10,7 +13,7 @@ import problems.linkedlist.MergeTwoSortedListsQ21;
 import problems.linkedlist.RemoveNthNodeFromEndOfListQ19;
 import problems.linkedlist.ReorderListQ143;
 import problems.linkedlist.ReverseLinkedListQ206;
-import test.utils.TestUtils;
+
 
 public class TestLinkedList {
 
@@ -18,43 +21,43 @@ public class TestLinkedList {
   public void testReverseLinkedListQ206() {
     ReverseLinkedListQ206 reverseLinkedListQ206 = new ReverseLinkedListQ206();
     var result = reverseLinkedListQ206.reverseList(
-        TestUtils.intArrayToListNode(new int[]{1, 2, 3, 4, 5}));
-    Assert.assertArrayEquals(new int[]{5, 4, 3, 2, 1}, TestUtils.listNodeListToIntArray(result));
+        intArrayToListNode(new int[]{1, 2, 3, 4, 5}));
+    Assert.assertArrayEquals(new int[]{5, 4, 3, 2, 1}, listNodeListToIntArray(result));
   }
 
   @Test
   public void testMergeTwoSortedListsQ21() {
     MergeTwoSortedListsQ21 mergeTwoSortedListsQ21 = new MergeTwoSortedListsQ21();
     var result = mergeTwoSortedListsQ21.mergeTwoLists(
-        TestUtils.intArrayToListNode(new int[]{1, 2, 4}),
-        TestUtils.intArrayToListNode(new int[]{1, 3, 4}));
-    Assert.assertArrayEquals(new int[]{1, 1, 2, 3, 4, 4}, TestUtils.listNodeListToIntArray(result));
+        intArrayToListNode(new int[]{1, 2, 4}),
+        intArrayToListNode(new int[]{1, 3, 4}));
+    Assert.assertArrayEquals(new int[]{1, 1, 2, 3, 4, 4}, listNodeListToIntArray(result));
   }
 
   @Test
   public void testReorderListQ143() {
     ReorderListQ143 reorderListQ143 = new ReorderListQ143();
-    ListNode head = TestUtils.intArrayToListNode(new int[]{1, 2, 3, 4, 5});
+    ListNode head = intArrayToListNode(new int[]{1, 2, 3, 4, 5});
     reorderListQ143.reorderList(head);
-    Assert.assertArrayEquals(new int[]{1, 5, 2, 4, 3}, TestUtils.listNodeListToIntArray(head));
+    Assert.assertArrayEquals(new int[]{1, 5, 2, 4, 3}, listNodeListToIntArray(head));
   }
 
   @Test
   public void testRemoveNthNodeFromEndOfListQ19() {
     RemoveNthNodeFromEndOfListQ19 removeNthNodeFromEndOfListQ19 = new RemoveNthNodeFromEndOfListQ19();
     var result = removeNthNodeFromEndOfListQ19.removeNthFromEnd(
-        TestUtils.intArrayToListNode(new int[]{1, 2, 3, 4, 5}), 2);
-    Assert.assertArrayEquals(new int[]{1, 2, 3, 5}, TestUtils.listNodeListToIntArray(result));
+        intArrayToListNode(new int[]{1, 2, 3, 4, 5}), 2);
+    Assert.assertArrayEquals(new int[]{1, 2, 3, 5}, listNodeListToIntArray(result));
   }
 
   @Test
   public void testAddTwoNumbersQ2() {
     AddTwoNumbersQ2 addTwoNumbersQ2 = new AddTwoNumbersQ2();
     var result = addTwoNumbersQ2.addTwoNumbers(
-        TestUtils.intArrayToListNode(new int[]{9, 9, 9, 9, 9, 9, 9}),
-        TestUtils.intArrayToListNode(new int[]{9, 9, 9, 9}));
+        intArrayToListNode(new int[]{9, 9, 9, 9, 9, 9, 9}),
+        intArrayToListNode(new int[]{9, 9, 9, 9}));
     Assert.assertArrayEquals(new int[]{8, 9, 9, 9, 0, 0, 0, 1},
-        TestUtils.listNodeListToIntArray(result));
+        listNodeListToIntArray(result));
   }
 
   @Test

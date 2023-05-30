@@ -1,5 +1,7 @@
 package test;
 
+import static test.utils.TestUtils.isSimilarList;
+
 import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
@@ -7,7 +9,6 @@ import problems.stack.EvaluateReversePolishNotationQ150;
 import problems.stack.GenerateParenthesesQ22;
 import problems.stack.MinStackQ155;
 import problems.stack.ValidParenthesesQ20;
-import test.utils.TestUtils;
 
 public class TestStack {
 
@@ -43,7 +44,7 @@ public class TestStack {
     GenerateParenthesesQ22 generateParenthesesQ22 = new GenerateParenthesesQ22();
     var result = generateParenthesesQ22.generateParenthesis(3);
     Assert.assertTrue(
-        TestUtils.isSimilarList(List.of("((()))", "(()())", "(())()", "()(())", "()()()"), result));
+        isSimilarList(List.of("((()))", "(()())", "(())()", "()(())", "()()()"), result));
   }
 
 

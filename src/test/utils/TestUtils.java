@@ -60,7 +60,7 @@ public class TestUtils {
     return head;
   }
 
-  public static TreeNode levelOderArrayToTree(List<Integer> input) {
+  public static TreeNode levelOderArrayListToTree(List<Integer> input) {
     return insertLevelOrder(input, 0);
   }
 

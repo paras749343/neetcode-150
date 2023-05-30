@@ -1,6 +1,10 @@
 package test;
 
 
+import static test.utils.TestUtils.intArrayToIntegerList;
+import static test.utils.TestUtils.isSimilarList;
+import static test.utils.TestUtils.isSimilarListOfList;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -15,7 +19,7 @@ import problems.arraysandhashing.TopKFrequentElementsQ347;
 import problems.arraysandhashing.TwoSumQ1;
 import problems.arraysandhashing.ValidAnagramQ242;
 import problems.arraysandhashing.ValidSudokuQ36;
-import test.utils.TestUtils;
+
 
 public class TestArraysAndHashing {
 
@@ -38,7 +42,7 @@ public class TestArraysAndHashing {
     TwoSumQ1 twoSumQ1 = new TwoSumQ1();
     var result = twoSumQ1.twoSum(new int[]{2, 7, 11, 15}, 9);
     Assert.assertTrue(
-        TestUtils.isSimilarList(Arrays.asList(0, 1), TestUtils.intArrayToIntegerList(result)));
+        isSimilarList(Arrays.asList(0, 1), intArrayToIntegerList(result)));
   }
 
   @Test
@@ -50,7 +54,7 @@ public class TestArraysAndHashing {
     expected.add(List.of("bat"));
     expected.add(List.of("nat", "tan"));
     expected.add(List.of("ate", "eat", "tea"));
-    Assert.assertTrue(TestUtils.isSimilarListOfList(expected, result));
+    Assert.assertTrue(isSimilarListOfList(expected, result));
   }
 
   @Test
@@ -58,7 +62,7 @@ public class TestArraysAndHashing {
     TopKFrequentElementsQ347 topKFrequentElementsQ347 = new TopKFrequentElementsQ347();
     var result = topKFrequentElementsQ347.topKFrequent(new int[]{1, 1, 1, 2, 2, 3}, 2);
     Assert.assertTrue(
-        TestUtils.isSimilarList(Arrays.asList(1, 2), TestUtils.intArrayToIntegerList(result)));
+        isSimilarList(Arrays.asList(1, 2), intArrayToIntegerList(result)));
   }
 
   @Test
