@@ -6,6 +6,7 @@ import problems.slidingwindow.BestTimeToBuyAndSellStockQ121;
 import problems.slidingwindow.LongestRepeatingCharacterReplacementQ424;
 import problems.slidingwindow.LongestSubstringWithoutRepeatingCharactersQ3;
 import problems.slidingwindow.PermutationInStringQ567;
+import problems.slidingwindow.SlidingWindowMaximumQ239;
 
 public class TestSlidingWindow {
 
@@ -35,5 +36,12 @@ public class TestSlidingWindow {
     PermutationInStringQ567 permutationInStringQ567 = new PermutationInStringQ567();
     var result = permutationInStringQ567.checkInclusion("ab", "eidbaooo");
     Assert.assertTrue(result);
+  }
+
+  @Test
+  public void testSlidingWindowMaximumQ239() {
+    SlidingWindowMaximumQ239 slidingWindowMaximumQ239 = new SlidingWindowMaximumQ239();
+    var result = slidingWindowMaximumQ239.maxSlidingWindow(new int[]{1, 3, -1, -3, 5, 3, 6, 7}, 3);
+    Assert.assertArrayEquals(new int[]{3, 3, 5, 5, 6, 7}, result);
   }
 }

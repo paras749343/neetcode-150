@@ -35,6 +35,14 @@ public class TestUtils {
     return outputList;
   }
 
+  public static List<List<Integer>> int2DArrayToListOfListOfInteger(int[][] input) {
+    List<List<Integer>> result = new ArrayList<>();
+    for (int[] arr : input) {
+      result.add(Arrays.stream(arr).boxed().toList());
+    }
+    return result;
+  }
+
   public static int[] listNodeListToIntArray(ListNode input) {
     List<Integer> temporaryList = new ArrayList<>();
     while (input != null) {
